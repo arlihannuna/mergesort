@@ -25,7 +25,7 @@ def merge(left, right):
     return return_array
 
 
-def mergeSort(arr):
+def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     else:
@@ -36,13 +36,12 @@ def mergeSort(arr):
         right = arr[mid:]
 
         # Sort the two halves
-        left = mergeSort(left)
-        right = mergeSort(right)
+        left = merge_sort(left)
+        right = merge_sort(right)
 
         return merge(left, right)
 
 
 arr_ = [10, 9, 2, 4, 6, 13]
-sorted_arr = mergeSort(arr_)
+sorted_arr = merge_sort(arr_)
 print(sorted_arr)
-
